@@ -1,1 +1,1 @@
-# cloud-prac
+# cloud-prac:SpringCloud Practice Repository.
