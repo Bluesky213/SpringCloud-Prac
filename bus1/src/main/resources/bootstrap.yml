@@ -2,10 +2,14 @@ server:
   port: 8082
 spring:
   application:
-    name: gatewaydemo
+    name: bus
 eureka:
   client:
     register-with-eureka: true # 是否注册自己的信息到EurekaServer，默认是true
     fetch-registry: false # 是否拉取其它服务的信息，默认是true
     service-url: # EurekaServer的地址，现在是自己的地址，如果是集群，需要加上其它Server的地址。
       defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 30 #租约，单次租约时长
+    lease-expiration-duration-in-seconds: 90 #服务失效时长
+    instance-id: ${spring.application.name}:${server.port} #${random.int[8081,8089]}

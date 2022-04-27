@@ -1,4 +1,4 @@
-package com.christopher.ms;
+package com.christopher;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
